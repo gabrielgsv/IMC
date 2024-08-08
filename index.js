@@ -12,11 +12,11 @@ function handleClick() {
   if (peso === 0 || altura === 0) {
     resultado.textContent = "Por favor, preencha todos os campos.";
   } else {
-    if (imc < 18.5) {
+    if (imc <= 18.5) {
       resultado.textContent = `Seu IMC é ${formatNumber(imc)}\n Magreza`;
-    } else if (imc >= 18.5 && imc <= 24.9) {
+    } else if (imc > 18.5 && imc < 24.9) {
       resultado.textContent = `Seu IMC é ${formatNumber(imc)}\n Normal`;
-    } else if (imc >= 25 && imc <= 30) {
+    } else if (imc > 24.9 && imc <= 30) {
       resultado.textContent = `Seu IMC é ${formatNumber(imc)}\n Sobrepeso`;
     } else {
       resultado.textContent = `Seu IMC é ${formatNumber(imc)}\n Obesidade`;
